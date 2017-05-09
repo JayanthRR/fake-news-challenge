@@ -2,8 +2,13 @@ import sys
 import numpy as np
 
 from sklearn.ensemble import GradientBoostingClassifier
-from feature_engineering import refuting_features, polarity_features, hand_features, gen_or_load_feats
-from feature_engineering import word_overlap_features
+from feature_engineering import gen_or_load_feats
+from hand_features import hand_features
+from discussing_features import discussing_features
+from agreeing_features import agreeing_features
+from refuting_features import refuting_features
+from word_overlap_features import word_overlap_features
+from polarity_features import polarity_features
 from utils.dataset import DataSet
 from utils.generate_test_splits import kfold_split, get_stances_for_folds
 from utils.score import report_score, LABELS, score_submission
